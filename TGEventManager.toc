@@ -1,0 +1,11 @@
+## Interface: 20501
+## Title: TGEventManager
+## Author: Empirical
+## Version: 1.0
+## DefaultState: enabled
+## Notes: Register for events
+## URL: 
+## Dependencies:
+## SavedVariables: 
+
+TGEventManager.lua
