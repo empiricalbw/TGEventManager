@@ -23,7 +23,7 @@ function TGEventManager.Register(obj)
     for k in pairs(obj) do
         if string.upper(k) == k then
             if starts_with(k, "CLEU_") then
-                subEvent = k:sub(6)
+                local subEvent = k:sub(6)
                 if TGEventManager.cleuListeners[subEvent] == nil then
                     TGEventManager.cleuListeners[subEvent] = {}
                 end
@@ -62,7 +62,7 @@ function TGEventManager.OnEvent(frame, event, ...)
 end
 
 function TGEventManager.OnCLEU(timestamp, subEvent, ...)
-    listeners = TGEventManager.cleuListeners[subEvent]
+    local listeners = TGEventManager.cleuListeners[subEvent]
     if listeners == nil then
         return
     end
